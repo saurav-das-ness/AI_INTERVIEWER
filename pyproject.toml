@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["app", "streamlit_app"]
+
+[tool.setuptools.package-data]
+app = ["py.typed"]
+
+[project]
+name = "ai-role-play-interview"
+version = "0.1.0"
+description = "AI-assisted interview practice tool with FastAPI and Streamlit"
+requires-python = ">=3.11"
+dependencies = [
+  "boto3>=1.35.0",
+  "chromadb>=0.5.0",
+  "fastapi>=0.112.0",
+  "langchain>=0.3.0",
+  "langchain-aws>=0.2.0",
+  "langchain-chroma>=0.2.0",
+  "openpyxl>=3.1.5",
+  "pydantic>=2.8.0",
+  "pypdf>=4.3.1",
+  "python-multipart>=0.0.9",
+  "streamlit>=1.37.0",
+  "uvicorn>=0.30.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
